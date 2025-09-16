@@ -16,11 +16,12 @@
     </form>
 
 
-    <ul>
+    <ol>
         {% for note in notes %}
-        <li>{{ note }} </li>
+        <li>{{ note|string|upper }}</li>
         {% endfor %}
-    </ul>
+    </ol>
+
 
     <h3><a href="/">Back To Home</a></h3>
 
