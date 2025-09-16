@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes from App Template</title>
+</head>
+
+<body>
+    <h1>My Notes</h1>
+
+    <form action="/notes/add" method="post">
+        <input type="text" name="note" placeholder="Write a note" required>
+        <button type="submit">Add Your Note</button>
+    </form>
+
+
+    <ul>
+        {% for note in notes %}
+        <li>{{ note }} </li>
+        {% endfor %}
+    </ul>
+
+    <h3><a href="/">Back To Home</a></h3>
+
+</body>
+
+</html>
