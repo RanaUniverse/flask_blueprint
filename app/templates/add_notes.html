@@ -10,12 +10,22 @@
 <body>
     <h1>Add a New Note</h1>
 
-    <form action="/notes/add" method="post">
+    {#
+    This is a Jinja comment and won't be rendered in the HTML output.
+    This below line was old and risky.
+    This is differnet form action="/notes/add" method="post"
+    #}
+
+    <form action="{{ url_for('notes.process_add_note') }}" method="post">
+
+
         <input type="text" name="note" placeholder="Write a note" required>
         <button type="submit">Add Note</button>
     </form>
 
-    <h3><a href="/notes">Back to Notes</a></h3>
+
+    <h3><a href="{{ url_for('notes.list_notes')}}">Go No All Notes</a></h3>
+
 </body>
 
 </html>
