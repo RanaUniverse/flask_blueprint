@@ -1,29 +1,39 @@
+<!-- This page will shows all the notes which has been created already. -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes from App Template</title>
+    <title>See All Notes</title>
 </head>
 
 <body>
-    <h1>My Notes</h1>
+    <h1>See Your All Notes Here...</h1>
 
-    <form action="/notes/add" method="post">
-        <input type="text" name="note" placeholder="Write a note" required>
-        <button type="submit">Add Your Note</button>
-    </form>
-
-
+    {% if notes %}
     <ol>
         {% for note in notes %}
-        <li>{{ note|string|upper }}</li>
+        <li>{{ note }}</li>
         {% endfor %}
     </ol>
+    {% else %}
+    <h3>No notes yet. Add one!</h3>
+    {% endif %}
 
 
-    <h3><a href="/">Back To Home</a></h3>
+    <h3>
+        <a href="{{ url_for('notes.show_note_list') }}">
+            Add a Note
+        </a>
+    </h3>
+
+    <h3>
+        <a href="/">
+            Go To Home Page
+        </a>
+    </h3>
 
 </body>
 
