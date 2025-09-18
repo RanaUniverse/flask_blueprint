@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Home Page</title>
+</head>
+
+<body>
+    <h1>Welcome To Profile Home Page</h1>
+    <p>This is where you can view your profile, manage your profile, change your passowrd and manages everythigns in
+        your accoutn.</p>
+
+    <h3>
+        <ul>
+            <li><a href="{{ url_for('home.home_page_fun') }}">Go To Home Page 🏠️</a></li>
+            <li><a href="{{ url_for('notes.list_notes') }}">See All The Notes 📖</a></li>
+            <li><a href="{{ url_for('notes.show_note_list') }}">Add a New Note ➕️</a></li>
+        </ul>
+    </h3>
+
+</body>
+
+</html>

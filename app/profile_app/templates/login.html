@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login To View Your Profile</title>
+</head>
+<body>
+    <h1>Fill The Form Below</h1>
+
+    <form action="{{ url_for('profile.process_login_fun') }}" method="post">
+        <input type="email" name="email" placeholder="Enter Your Email Address" required>
+        <br>
+        <input type="password" name="password" placeholder="Enter Your password" required>
+        <br>
+        <button type="submit">Login Here</button>
+    </form>
+
+    <a href="/">Go To Home Page</a>
+
+</body>
+</html>
